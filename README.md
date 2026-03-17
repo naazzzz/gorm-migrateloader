@@ -10,13 +10,21 @@ It is assumed that migrations will be located in the following directory:
 ```sh
 go get github.com/naazzzz/gorm-migrateloader
 go install github.com/naazzzz/gorm-migrateloader
+
+gorm-migrateloader install
 ```
 
 ## Usage
-It is assumed that it will be used on the root directory of the project.
+1. Add gorm.Model in your models. For example:
+```go
+type ExampleModel struct {
+	gorm.Model
+	Data string `gorm:"column:data;not null"`
+}
+```
 
+2. Call the 'generate' command to generate migrations (assuming this will be the root of the project). For example:
 ```sh
-gorm-migrateloader install
 gorm-migrateloader generate .
 ```
 
