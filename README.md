@@ -34,7 +34,7 @@ The generated migrations will look like golang-migrate, so they are fully compat
 ## Avalibility drivers
 
 - `postgres`
-- `sqlite3`
+- `sqlite`
 
 ## Help
 
